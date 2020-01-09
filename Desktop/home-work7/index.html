@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>home-work7</title>
+</head>
+<body>
+	<script>
+		/* 
+
+		1. Написать функцию odd, которая принимает массив чисел и возвращает массив с нечетными значениями.
+
+		2. Написать функцию even, которая делает все тож самое, но возвращает массив с четными значениями.
+
+		3*. И на смекалку. У нас есть многомерный массив чисел, количество вложенностей произвольное, мы его не знаем.
+		 Нужно написать функцию flat, которая вернет одномерный массив из всех чисел */
+
+		 const array = [1,2,3,4,5,6,7,8,9,10];
+
+		 
+
+		 const oddNumbers = function(arr) {
+		 	return arr.filter(function(element){
+		 		if(element % 2) {
+		 			return element;
+		 		}
+		 	});	
+		 };
+
+		 console.log("нечетные числа" + " " + oddNumbers(array));
+
+		
+
+		 const evenNumbers = function(arr) {
+		 	return arr.filter(function(element){
+		 		if(!(element % 2)) {
+		 			return element;
+		 		}
+		 	});	
+		 };
+
+		 console.log("четные числа" + " " +evenNumbers(array));
+
+
+
+		 const array1 = [[1,2],[2,[4],7],[0,7,9],[199999999]];
+
+		 function Myflat(arr){
+		 	return array1.toString().split(`,`).map(Number);
+		 }
+
+		 console.log(Myflat(array1));
+
+	</script>
+	
+</body>
+</html>
